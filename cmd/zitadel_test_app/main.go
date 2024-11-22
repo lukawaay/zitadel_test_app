@@ -13,7 +13,6 @@ func main() {
 	logger := slog.New(slog.NewTextHandler(os.Stdout, nil))
 
 	config, err := config.Load(config.Source {
-		UserAgentPrefix: os.Getenv("ZITADEL_TEST_APP_USER_AGENT_PREFIX"),
 		InstanceDomain: os.Getenv("ZITADEL_TEST_APP_INSTANCE_DOMAIN"),
 		InstancePort: os.Getenv("ZITADEL_TEST_APP_INSTANCE_PORT"),
 		InstanceProtocol: os.Getenv("ZITADEL_TEST_APP_INSTANCE_PROTOCOL"),

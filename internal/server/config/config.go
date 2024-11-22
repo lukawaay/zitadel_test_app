@@ -10,7 +10,6 @@ type Config struct {
 	InstancePort uint16
 	InstanceProtocol string
 	InstanceSecure bool
-	UserAgentPrefix string
 	Key string
 	ClientID string
 	RedirectURI string
@@ -21,7 +20,6 @@ type Source struct {
 	InstanceDomain string
 	InstancePort string
 	InstanceProtocol string
-	UserAgentPrefix string
 	Key string
 	ClientID string
 	RedirectURI string
@@ -53,7 +51,6 @@ func Load(source Source) (*Config, error) {
 		InstancePort: uint16(instancePort),
 		InstanceProtocol: source.InstanceProtocol,
 		InstanceSecure: instanceSecure,
-		UserAgentPrefix: source.UserAgentPrefix,
 		Key: source.Key,
 		ClientID: source.ClientID,
 		RedirectURI: source.RedirectURI,
