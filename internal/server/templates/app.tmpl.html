@@ -1,0 +1,23 @@
+{{ define "app" -}}
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<p>Welcome back!</p>
+
+<ul>
+	<li> ID: <em> {{ .user.Subject }} </em> </li>
+	<li> Name: <em> {{ .user.GivenName }} </em> </li>
+	<li> Email: <em> {{ .user.Email }} </em> </li>
+	<li> Access Token: <em> {{ .token }} </em> </li>
+</ul>
+
+<a href="/auth/logout">Log Out</a>
+
+</body>
+
+</html>
+
+{{- end}}
